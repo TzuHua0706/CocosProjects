@@ -164,7 +164,7 @@
           <BoolFrame FrameIndex="35" Tween="False" Value="False" />
         </Timeline>
       </Animation>
-      <ObjectData Name="rootNode" Tag="15" ctype="GameNodeObjectData">
+      <ObjectData Name="triRoot" Tag="15" ctype="GameNodeObjectData">
         <Size X="0.0000" Y="0.0000" />
         <Children>
           <AbstractNodeData Name="triblock" ActionTag="1414546605" VisibleForFrame="False" Alpha="24" Tag="37" IconVisible="False" LeftMargin="-84.0000" RightMargin="-84.0000" TopMargin="-72.0000" BottomMargin="-72.0000" ctype="SpriteObjectData">

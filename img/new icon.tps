@@ -203,6 +203,7 @@
             <key type="filename">music_n.png</key>
             <key type="filename">music_t.png</key>
             <key type="filename">next.png</key>
+            <key type="filename">next_n.png</key>
             <key type="filename">next_t.png</key>
             <key type="filename">play.png</key>
             <key type="filename">play_t.png</key>
@@ -240,6 +241,7 @@
             <filename>setting_t.png</filename>
             <filename>stop.png</filename>
             <filename>stop_t.png</filename>
+            <filename>next_n.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

@@ -46,7 +46,20 @@
             <key>next.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{228,0},{76,74}}</string>
+                <string>{{0,74},{76,74}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{76,74}}</string>
+                <key>sourceSize</key>
+                <string>{76,74}</string>
+            </dict>
+            <key>next_n.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{76,74},{76,74}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -59,7 +72,7 @@
             <key>next_t.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{304,0},{76,74}}</string>
+                <string>{{152,74},{76,74}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -72,7 +85,7 @@
             <key>play.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{380,0},{76,74}}</string>
+                <string>{{0,148},{76,74}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -85,7 +98,7 @@
             <key>play_t.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{456,0},{76,74}}</string>
+                <string>{{76,148},{76,74}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -98,7 +111,7 @@
             <key>replay.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{532,0},{76,74}}</string>
+                <string>{{152,148},{76,74}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -111,7 +124,7 @@
             <key>replay_t.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{608,0},{76,74}}</string>
+                <string>{{0,222},{76,74}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -124,7 +137,7 @@
             <key>setting.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{684,0},{76,74}}</string>
+                <string>{{76,222},{76,74}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -137,7 +150,7 @@
             <key>setting_t.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{760,0},{76,74}}</string>
+                <string>{{152,222},{76,74}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -150,7 +163,7 @@
             <key>stop.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{836,0},{76,74}}</string>
+                <string>{{0,296},{76,74}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -163,7 +176,7 @@
             <key>stop_t.png</key>
             <dict>
                 <key>frame</key>
-                <string>{{912,0},{76,74}}</string>
+                <string>{{76,296},{76,74}}</string>
                 <key>offset</key>
                 <string>{0,0}</string>
                 <key>rotated</key>
@@ -185,9 +198,9 @@
             <key>realTextureFileName</key>
             <string>new icon.png</string>
             <key>size</key>
-            <string>{988,74}</string>
+            <string>{228,370}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:2d8fe4ffb68b673fade41339a30d30cd:47b79b039635d82c20a8af01418db33f:94e2c6fbaa9e4871301ff0a514a2723e$</string>
+            <string>$TexturePacker:SmartUpdate:3a106253be7ced359895a53b44d3cdac:0ddae551d4832d4b8d7ff833b09b9703:94e2c6fbaa9e4871301ff0a514a2723e$</string>
             <key>textureFileName</key>
             <string>new icon.png</string>
         </dict>

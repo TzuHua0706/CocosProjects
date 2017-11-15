@@ -8,7 +8,9 @@ using namespace cocostudio::timeline;
 using namespace ui;
 
 select_character::select_character(int number, cocos2d::Node * rootNode, bool left) {
+	rootNode->removeChild(character);
 	char ch_img[NUMBER][25] = { CH_1, CH_2, CH_3, CH_4 };
+	//小隻的
 	for (int i = 0; i < NUMBER; i++) {
 		ch[i] = (cocos2d::Sprite *)rootNode->getChildByName(ch_img[i]);
 		/*if (i > 4) {
@@ -23,12 +25,14 @@ select_character::select_character(int number, cocos2d::Node * rootNode, bool le
 select_character::~select_character(){
 }
 void select_character::turn(int number, cocos2d::Node * rootNode, bool left) {
+	//大隻的
 	char run_character[NUMBER][25] = { RUN_1, RUN_2, RUN_3, RUN_4};
 	character = CSLoader::createNode(run_character[number]);
 	character->setPosition(615, 340);
 	auto chAction = (ActionTimeline *)CSLoader::createTimeline(run_character[number]);
 	character->runAction(chAction);
 	chAction->gotoFrameAndPlay(0, 24, true);
+
 	if (left) {
 		for (int i = 0; i < NUMBER; i++) {
 			goAction[i] = cocos2d::JumpTo::create(0.1f, c_pt[(i - 1 + NUMBER) % NUMBER], 0, 1);

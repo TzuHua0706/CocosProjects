@@ -29,11 +29,11 @@ void game_scene::get_character(unsigned int get) {
 	game_character = get;
 	//run character
 	char animation_character[NUMBER][25] = { RUN_1, RUN_2, RUN_3, RUN_4 };
-	character = CSLoader::createNode(animation_character[game_character]);
-	character->setPosition(1105, 340);
-	rootNode_game->addChild(character);
+	g_character = CSLoader::createNode(animation_character[game_character]);
+	g_character->setPosition(1105, 340);
+	rootNode_game->addChild(g_character);
 	auto chAction = (ActionTimeline *)CSLoader::createTimeline(animation_character[game_character]);
-	character->runAction(chAction);
+	g_character->runAction(chAction);
 	chAction->gotoFrameAndPlay(0, 24, true);
 }
 bool game_scene::init()
@@ -85,7 +85,7 @@ bool game_scene::init()
 	rootNode_game->addChild(mouth, 1);
 
 	//jump
-	this->jump = Rect(origin.x, origin.y, visibleSize.width, visibleSize.height);
+	this->jump = Rect(origin.x + 50, origin.y + 50, visibleSize.width - 100, visibleSize.height - 100);
 
 	set_Obstacle::set_Obstacle(rootNode_game);
 
@@ -101,6 +101,16 @@ bool game_scene::init()
 }
 void game_scene::doStep(float dt)
 {
+}
+void game_scene::bt_home_event(Ref *pSender, Widget::TouchEventType type) {
+	if (scene_btn) {
+		removeChild(rootNode_game);
+		CCScene * scene = CCScene::create();
+		HelloWorld * layer = HelloWorld::create();
+		scene->addChild(layer);
+		CCDirector::sharedDirector()->replaceScene(CCTransitionFade::create(1.5f, scene));
+		scene_btn = false;
+	}
 }
 void game_scene::bt_music_event(Ref *pSender, Widget::TouchEventType type) {
 	switch (type)
@@ -120,29 +130,19 @@ void game_scene::bt_music_event(Ref *pSender, Widget::TouchEventType type) {
 	default: break;
 	}
 }
-void game_scene::bt_home_event(Ref *pSender, Widget::TouchEventType type) {
-	if (scene_btn) {
-		removeChild(rootNode_game);
-		CCScene * scene = CCScene::create();
-		HelloWorld * layer = HelloWorld::create();
-		scene->addChild(layer);
-		CCDirector::sharedDirector()->replaceScene(CCTransitionFade::create(1.5f, scene));
-		scene_btn = false;
-	}
-}
 bool  game_scene::onTouchBegan(cocos2d::Touch *pTouch, cocos2d::Event *pEvent)//觸碰開始事件
 {
 	Point touchLoc = pTouch->getLocation();
 	if (jump.containsPoint(touchLoc)) {
 		Point seat_e = eyes->getPosition();
 		Point seat_m = mouth->getPosition();
-		Point seat = character->getPosition();
+		Point seat = g_character->getPosition();
 		auto jumpAction_e = cocos2d::JumpTo::create(0.5f, seat_e, 250, 1);
 		auto jumpAction_m = cocos2d::JumpTo::create(0.5f, seat_m, 250, 1);
 		auto jumpAction = cocos2d::JumpTo::create(0.5f, seat, 250, 1);
 		eyes->runAction(jumpAction_e);
 		mouth->runAction(jumpAction_m);
-		character->runAction(jumpAction);
+		g_character->runAction(jumpAction);
 	}
 	return true;
 }

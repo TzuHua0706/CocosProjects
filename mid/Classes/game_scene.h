@@ -21,7 +21,7 @@ public:
 	cocos2d::ui::Button * btn_home;
 	cocos2d::ui::Button * btn_music;
 	cocos2d::Node * rootNode_game;
-	cocos2d::Node * character;
+	cocos2d::Node * g_character;
 	cocos2d::Node * bg_line;
 	cocos2d::Rect jump;
 

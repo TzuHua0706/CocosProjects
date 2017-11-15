@@ -104,7 +104,7 @@ void game_scene::doStep(float dt)
 }
 void game_scene::bt_home_event(Ref *pSender, Widget::TouchEventType type) {
 	if (scene_btn) {
-		removeChild(rootNode_game);
+		//removeChild(rootNode_game);
 		CCScene * scene = CCScene::create();
 		HelloWorld * layer = HelloWorld::create();
 		scene->addChild(layer);

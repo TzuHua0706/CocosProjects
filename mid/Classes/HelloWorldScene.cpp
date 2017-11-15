@@ -114,7 +114,7 @@ void HelloWorld::doStep(float dt)
 }
 void HelloWorld::bt_play_event(Ref *pSender, Widget::TouchEventType type) {
 	if (scene_btn) {
-		removeChild(rootNode);
+		//removeChild(rootNode);
 		CCScene * scene = CCScene::create();
 		game_scene * layer = game_scene::create();
 		layer->get_character(number);
